@@ -19,6 +19,8 @@ body {
     margin-right: 20px;
     margin-top: -5px;
     margin-left: -5px;
+    text-align: right; 
+    resize: none;
 }
 .buttonline1 {
     width: 60px;
