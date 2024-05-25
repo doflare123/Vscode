@@ -7,9 +7,10 @@ function clickButton() {
     // else if(event.target.id == "%"){
     // }
     else if(event.target.id == "="){
-        let items = area.value.split(/([+\-×÷*])/);
+        let items = area.value.split(/(?=[)(+\-×÷*])/).filter(Boolean);
         console.log(items);
         let bukcount = 0;
+        let result = "";
         for (let i = 0; i < items.length; i++) {
             let item = items[i]; // текущий элемент массива
             let newItem = ''; // новая строка для хранения символов без букв
@@ -17,9 +18,18 @@ function clickButton() {
         
             for (let j = 0; j < item.length; j++) {
                 let char = item[j]; // текущий символ элемента
-                if (!isNaN(char) || ['+', '-', '/', '×', '÷', '*'].includes(char)) {
+                if (!isNaN(char) || ['+', '-', '/','÷', '*', ')', '('].includes(char) || char === '×') {
+                    if (char === '÷') {
+                        char = '/'; // заменяем символ деления
+                        hasLetters = true;
+                    }
+                    if (char === '×') {
+                        char = '*'; // заменяем символ умножения
+                        hasLetters = true;
+                    }
                     newItem += char; // добавляем символ, если это число или оператор
-                } else {
+                } 
+                else {
                     hasLetters = true; // указываем, что в элементе есть буквы
                     bukcount++;
                 }
@@ -35,11 +45,12 @@ function clickButton() {
         area.value = "";
         for (let j = 0; j < items.length; j++) {
             let char = items[j]; // текущий символ элемента
-            if (char !== ",") { // проверяем, что символ не является запятой
-                area.value += char; // добавляем символ в input, если это не запятая
+            if (char != "," || ['+', '-', '/','*'].includes(char)) { // проверяем, что символ не является запятой
+                result += char; // переводим строку в число
             }
         }
-        
+        console.log(result);
+        area.value = eval(result);
     }
     else
         area.value += event.target.id;
