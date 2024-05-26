@@ -1,13 +1,29 @@
-function clickButton() {
-    if(event.target.id == "C")
-        area.value = "";
-    else if(event.target.id == "⌫"){
-        area.value = area.value.toString().slice(0, -1);
+function clickButton(){
+    area.value += event.target.id;
+}
+        
+function clearAll() {
+    area.value = "";
+}
+
+function lastoperation() {
+    let items = area.value.split(/(?=[)(+\-×÷*])/).filter(Boolean);
+    area.value = "";
+    items.pop();
+    for (let j = 0; j < items.length; j++) {
+        let char = items[j]; // текущий символ элемента
+        if (char != "," || ['+', '-', '/','*'].includes(char)) { // проверяем, что символ не является запятой
+            area.value += char;
+        }
     }
-    // else if(event.target.id == "%"){
-    // }
-    else if(event.target.id == "="){
-        let items = area.value.split(/(?=[)(+\-×÷*])/).filter(Boolean);
+}
+
+function backspace() {
+    area.value = area.value.toString().slice(0, -1);
+}
+
+function result() {
+    let items = area.value.split(/(?<=[+\-×÷*])(?![+\-×÷*])/).filter(Boolean);
         console.log(items);
         let bukcount = 0;
         let result = "";
@@ -34,14 +50,14 @@ function clickButton() {
                     bukcount++;
                 }
             }
-        
             if (hasLetters) {
                 items[i] = newItem; // заменяем элемент на новую строку без букв
             }
         }
-        console.log(bukcount);
-        if (bukcount>0) 
-            alert("Буквы нельзя использовать! А если бы я не заметил и сломался? Но не волнуйся, я их удалил!");
+        if (bukcount>0) {
+            messege.style.visibility = 'revert';
+            setTimeout(() => messege.style.visibility = 'hidden', 2000);
+        }
         area.value = "";
         for (let j = 0; j < items.length; j++) {
             let char = items[j]; // текущий символ элемента
@@ -49,9 +65,5 @@ function clickButton() {
                 result += char; // переводим строку в число
             }
         }
-        console.log(result);
         area.value = eval(result);
-    }
-    else
-        area.value += event.target.id;
-    }
+}

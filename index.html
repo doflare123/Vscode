@@ -10,9 +10,9 @@
 <body>
     <div class="container">
         <input id = "area" class="area" rows="2" cols="50"></input>
-            <button class="buttonline1" onclick="clickButton()" id = "CE">CE</button>
-            <button class="buttonline1" onclick="clickButton()" id = "C">C</button>
-            <button class="buttonline1" onclick="clickButton()" id = "⌫">⌫</button>
+            <button class="buttonline1" onclick="lastoperation()" id = "CE">CE</button>
+            <button class="buttonline1" onclick="clearAll()" id = "C">C</button>
+            <button class="buttonline1" onclick="backspace()" id = "⌫">⌫</button>
             <button class="buttonline1" onclick="clickButton()" id = "+">+</button>
             <button class="buttonline2" onclick="clickButton()" id = "1">1</button>
             <button class="buttonline2" onclick="clickButton()" id = "2">2</button>
@@ -29,8 +29,9 @@
             <button class="buttonline5" onclick="clickButton()" id = "+/-">+/-</button>
             <button class="buttonline5" onclick="clickButton()" id = "0">0</button>
             <button class="buttonline5" onclick="clickButton()" id = ",">,</button>
-            <button class="buttonline5" onclick="clickButton()" id = "=">=</button>
+            <button class="buttonline5" onclick="result()" id = "=">=</button>
     </div>
+    <p id = "messege" class="speech">Буквы нельзя использовать! А если бы я не заметил и сломался? Но не волнуйся, я их удалил!</p>
     <!-- <div class="container">
         
     </div> -->

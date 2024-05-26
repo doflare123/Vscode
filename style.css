@@ -4,17 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 350px;
     height: 370px;
+    top: 60px;
     margin: 70px auto;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 60px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     animation: fadeIn 0.5s;
+    position: relative;
 }
-.area{
+
+.area {
     height: 70px;
     width: 360px;
     margin-right: 10px;
@@ -23,43 +27,55 @@ body {
     text-align: right; 
     resize: none;
 }
-.buttonline1 {
-    width: 60px;
-    height: 40px;
-    border: 0cm;
-    margin-right: -10px; 
-    margin-top: 20px;
-    margin-left: 27px;
-}
-.buttonline2 {
-    width: 60px;
-    height: 40px;
-    border: 0cm;
-    margin-right: -10px; 
-    margin-top: 20px;
-    margin-left: 27px;
-}
-.buttonline3 {
-    width: 60px;
-    height: 40px;
-    border: 0cm;
-    margin-right: -10px; 
-    margin-top: 20px;
-    margin-left: 27px;
-}
-.buttonline4 {
-    width: 60px;
-    height: 40px;
-    border: 0cm;
-    margin-right: -10px; 
-    margin-top: 20px;
-    margin-left: 27px;
-}
+
+.buttonline1,
+.buttonline2,
+.buttonline3,
+.buttonline4,
 .buttonline5 {
     width: 60px;
     height: 40px;
-    border: 0cm;
+    border: 0;
     margin-right: -10px; 
     margin-top: 20px;
     margin-left: 27px;
+}
+
+p.speech {
+    visibility: hidden;
+    position: absolute;
+    right: 400px; /* Position near the right edge */
+    top: 0px; /* Position near the top edge */
+    width: 310px;
+    height: 135px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 35px;
+    background-color: #fff;
+    border: 2px solid #666;
+    border-radius: 58px;
+    box-shadow: 2px 2px 4px #888;
+}
+
+p.speech:before, p.speech:after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #666;
+}
+
+p.speech:before {
+    right: 270px; /* Position to the left of the speech bubble */
+    top: 125px; /* Position relative to the speech bubble */
+    width: 40px;
+    height: 40px;
+    border-radius: 28px;
+}
+
+p.speech:after {
+    right: 300px; /* Position to the left of the speech bubble */
+    top: 160px; /* Position relative to the speech bubble */
+    width: 20px;
+    height: 20px;
+    border-radius: 18px;
 }
