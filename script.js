@@ -67,3 +67,7 @@ function result() {
         }
         area.value = eval(result);
 }
+
+function ChoiceCalc() {
+    console.log("123");
+}
