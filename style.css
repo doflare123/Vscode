@@ -15,6 +15,8 @@ body {
     top: 0;
     z-index: 1000;
     padding: 0 20px;
+    animation-duration: 1s;
+    animation-name: down;
 }
 .container {
     width: 350px;
@@ -28,6 +30,8 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     animation: fadeIn 0.5s;
+    animation-duration: 2s;
+    animation-name: calc;
 }
 .area {
     height: 70px;
@@ -88,9 +92,52 @@ p.speech:after {
 .buttonChoice{
     margin-right: auto;
     color: #524b4b;
+    left: 1px;
     background-color: #000000;
     border: 0;
+    position: relative;
+    animation-duration: 1.5s;
+    animation-name: slider;
 }
 .buttonChoice .fas{
+    left: 1px;
     font-size: 40px;
+}
+
+@keyframes slider {
+    from{
+        margin-left: 500%;
+        width: 100%;
+    }
+    to{
+        margin-left: -47%;
+        width: 100%;
+    }
+}
+
+@keyframes down{
+    from{
+        margin-top: -100px;
+    }
+    to{
+        margin-top: 0px;
+    }
+}
+
+@keyframes calc{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes click{
+    from{
+        rotate: 0%;
+    }
+    to{
+        rotate: 100%;
+    }
 }

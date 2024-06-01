@@ -1,3 +1,8 @@
+line = 0;
+
+function animationChoiceButton() {
+    
+}
 function clickButton(){
     area.value += event.target.id;
 }
@@ -69,5 +74,15 @@ function result() {
 }
 
 function ChoiceCalc() {
-    console.log("123");
+    // let el = document.getElementById('selector'),
+    // cs = getComputedStyle(el);
+    // let leftValue = parseInt(cs.left)|| 0;
+    // let moveValue = 50;
+    // let newPos = leftValue + moveValue;
+    
+    // for(let i = 0; i < 50; i++) {
+    //     el.style.left = newPos + 'px';
+    // }
+    // console.log(el.style.left);
+
 }
