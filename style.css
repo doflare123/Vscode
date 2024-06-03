@@ -33,6 +33,19 @@ body {
     animation-duration: 2s;
     animation-name: calc;
 }
+.ChoicePanel{
+    visibility: hidden;
+    width: 50px;
+    height: 100%;
+    background-color: #292828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
 .area {
     height: 70px;
     width: 360px;
@@ -133,11 +146,33 @@ p.speech:after {
     }
 }
 
-@keyframes click{
+.rotate{
+    animation-name: rot;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rot {
     from{
-        rotate: 0%;
+        transform: rotate(0deg);
     }
     to{
-        rotate: 100%;
+        transform: rotate(360deg);
+        margin-left: 7%;
+    }
+}
+
+.visiblePanel{
+    animation-name: left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left{
+    from{
+        margin-left: -100%;
+    }
+    to{
+        margin-left: 0px;
     }
 }

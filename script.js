@@ -1,8 +1,4 @@
 line = 0;
-
-function animationChoiceButton() {
-    
-}
 function clickButton(){
     area.value += event.target.id;
 }
@@ -74,15 +70,14 @@ function result() {
 }
 
 function ChoiceCalc() {
-    // let el = document.getElementById('selector'),
-    // cs = getComputedStyle(el);
-    // let leftValue = parseInt(cs.left)|| 0;
-    // let moveValue = 50;
-    // let newPos = leftValue + moveValue;
-    
-    // for(let i = 0; i < 50; i++) {
-    //     el.style.left = newPos + 'px';
-    // }
-    // console.log(el.style.left);
+    let el = document.getElementById('selector');
+    let ChoicePanel = document.getElementById('ChoicePanel');
 
+    el.onclick = function() {
+        el.classList.add('rotate');
+            ChoicePanel.style.visibility = 'visible'; // Устанавливаем видимость на 'visible'
+            ChoicePanel.classList.add('visiblePanel'); // Затем добавляем класс для анимации
+      };
+   
+    
 }
