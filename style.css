@@ -89,15 +89,15 @@ p.speech:before, p.speech:after {
     border: 2px solid #666;
 }
 p.speech:before {
-    right: 270px; /* Position to the left of the speech bubble */
-    top: 125px; /* Position relative to the speech bubble */
+    right: 270px; 
+    top: 125px; 
     width: 40px;
     height: 40px;
     border-radius: 28px;
 }
 p.speech:after {
-    right: 300px; /* Position to the left of the speech bubble */
-    top: 160px; /* Position relative to the speech bubble */
+    right: 300px; 
+    top: 160px; 
     width: 20px;
     height: 20px;
     border-radius: 18px;
@@ -115,6 +115,36 @@ p.speech:after {
 .buttonChoice .fas{
     left: 1px;
     font-size: 40px;
+}
+
+.SimpleCalck{
+    margin-top: -700px;
+    margin-right: auto;
+    background-color: #292828;
+    left: 27px;
+    size: 30px;
+    border: 0;
+    position: relative;
+}
+.SimpleCalck .fas{
+    font-size: 45px; 
+    margin-right: 4px;
+}
+
+.ScientificCalck{
+    margin-top: -550px;
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    background-color: #292828;
+    left: -23px;
+    size: 30px;
+    border: 0;
+    position: relative;
+}
+.ScientificCalck .fas{
+    font-size: 40px; 
+    margin-right: 4px;
 }
 
 @keyframes slider {

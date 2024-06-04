@@ -75,9 +75,7 @@ function ChoiceCalc() {
 
     el.onclick = function() {
         el.classList.add('rotate');
-            ChoicePanel.style.visibility = 'visible'; // Устанавливаем видимость на 'visible'
-            ChoicePanel.classList.add('visiblePanel'); // Затем добавляем класс для анимации
-      };
-   
-    
+        ChoicePanel.style.visibility = 'visible';
+        ChoicePanel.classList.add('visiblePanel');
+    };
 }
