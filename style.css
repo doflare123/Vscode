@@ -21,8 +21,8 @@ body {
 .container {
     width: 350px;
     height: 370px;
-    position: absolute; /* Заменяем position: fixed */
-    top: 170px; /* Устанавливаем расположение относительно верхней границы родительского элемента */
+    position: absolute; 
+    top: 300px; /* Устанавливаем расположение относительно верхней границы родительского элемента */
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
@@ -32,9 +32,11 @@ body {
     animation: fadeIn 0.5s;
     animation-duration: 2s;
     animation-name: calc;
+    z-index: 1000;
 }
 .ChoicePanel{
     visibility: hidden;
+    position: flex;
     width: 50px;
     height: 100%;
     background-color: #292828;
@@ -69,9 +71,9 @@ body {
 }
 p.speech {
     visibility: hidden;
-    position: absolute;
-    right: 400px;
-    top: 0px; 
+    position: fixed;
+    right: 400px; /* Отступ от правого края окна */
+    top: 110px;
     width: 310px;
     height: 135px;
     text-align: center;
@@ -81,6 +83,7 @@ p.speech {
     border: 2px solid #666;
     border-radius: 58px;
     box-shadow: 2px 2px 4px #888;
+    z-index: 1000;
 }
 p.speech:before, p.speech:after {
     content: '';
@@ -103,6 +106,7 @@ p.speech:after {
     border-radius: 18px;
 }
 .buttonChoice{
+    position: flex;
     margin-right: auto;
     color: #524b4b;
     left: 1px;
@@ -116,12 +120,14 @@ p.speech:after {
     left: 1px;
     font-size: 40px;
 }
-
+.buttonChoice:hover {
+    cursor: pointer;
+}
 .SimpleCalck{
     margin-top: -700px;
     margin-right: auto;
     background-color: #292828;
-    left: 27px;
+    left: 29px;
     size: 30px;
     border: 0;
     position: relative;
@@ -129,6 +135,7 @@ p.speech:after {
 .SimpleCalck .fas{
     font-size: 45px; 
     margin-right: 4px;
+    color: #cfcbcb;
 }
 
 .ScientificCalck{
@@ -145,6 +152,32 @@ p.speech:after {
 .ScientificCalck .fas{
     font-size: 40px; 
     margin-right: 4px;
+    color: #cfcbcb;
+}
+
+.SimpleCalck:hover {
+    cursor: pointer;
+}
+.ScientificCalck:hover {
+    cursor: pointer;
+}
+
+.container_ScientificCalck {
+    visibility: hidden;
+    width: 350px;
+    height: 370px;
+    position: absolute; 
+    top: 300px; /* Устанавливаем расположение относительно верхней границы родительского элемента */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 60px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s;
+    animation-duration: 2s;
+    animation-name: calc;
+    z-index: 1000;
 }
 
 @keyframes slider {
@@ -188,7 +221,7 @@ p.speech:after {
     }
     to{
         transform: rotate(360deg);
-        margin-left: 7%;
+        margin-left: 70px;
     }
 }
 

@@ -12,7 +12,7 @@
     <div class="HightPanel">
         <button class="buttonChoice" onclick="ChoiceCalc()" id = "selector"><i class="fas fa-bars"</i></button>
     </div>
-    <div class="container">
+    <div class="container" id = "container">
         <input id = "area" class="area" rows="2" cols="50"></input>
             <button class="buttonline1" onclick="lastoperation()" id = "CE">CE</button>
             <button class="buttonline1" onclick="clearAll()" id = "C">C</button>
@@ -35,10 +35,35 @@
             <button class="buttonline5" onclick="clickButton()" id = ",">,</button>
             <button class="buttonline5" onclick="result()" id = "=">=</button>
     </div>
+    <div class="container_ScientificCalck" id = "container_ScientificCalck">
+        <input id = "area" class="area" rows="2" cols="50"></input>
+            <button class="buttonline1" onclick="lastoperation()" id = "CE">9</button>
+            <button class="buttonline1" onclick="clearAll()" id = "C">9</button>
+            <button class="buttonline1" onclick="backspace()" id = "⌫">9</button>
+            <button class="buttonline1" onclick="clickButton()" id = "+">9</button>
+            <button class="buttonline2" onclick="clickButton()" id = "1">9</button>
+            <button class="buttonline2" onclick="clickButton()" id = "2">9</button>
+            <button class="buttonline2" onclick="clickButton()" id = "3">9</button>
+            <button class="buttonline2" onclick="clickButton()" id = "÷">÷</button>
+            <button class="buttonline3" onclick="clickButton()" id = "4">4</button>
+            <button class="buttonline3" onclick="clickButton()" id = "5">5</button>
+            <button class="buttonline3" onclick="clickButton()" id = "6">6</button>
+            <button class="buttonline3" onclick="clickButton()" id = "×">×</button>
+            <button class="buttonline4" onclick="clickButton()" id = "7">7</button>
+            <button class="buttonline4" onclick="clickButton()" id = "8">8</button>
+            <button class="buttonline4" onclick="clickButton()" id = "9">9</button>
+            <button class="buttonline4" onclick="clickButton()" id = "-">-</button>
+            <button class="buttonline5" onclick="clickButton()" id = "+/-">+/-</button>
+            <button class="buttonline5" onclick="clickButton()" id = "0">0</button>
+            <button class="buttonline5" onclick="clickButton()" id = ",">,</button>
+            <button class="buttonline5" onclick="result()" id = "=">=</button>
+    </div>
     <div class="ChoicePanel" id = "ChoicePanel">
-     <button class="SimpleCalck" onclick="" id = "SimpleCalck"><i class="fas fa-calculator"></i></button>
-     <button class="ScientificCalck" onclick="" id = "ScientificCalck"><i class="fas fa-square-root-alt"></i></button>
+     <button class="SimpleCalck" onclick="changeOnSimple()" id = "SimpleCalck"><i class="fas fa-calculator"></i></button>
+     <button class="ScientificCalck" onclick="changeOnSient()" id = "ScientificCalck"><i class="fas fa-square-root-alt"></i></button>
     </div>
     <p id = "messege" class="speech">Буквы нельзя использовать! А если бы я не заметил и сломался? Но не волнуйся, я их удалил!</p>
+    <div class="ScientificCalck">
+    </div>
 </body>
 </html>
